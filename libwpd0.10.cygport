@@ -1,0 +1,21 @@
+NAME="libwpd0.10"
+VERSION=0.10.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Library for reading WordPerfect documents"
+DESCRIPTION="Library and utilities for reading WordPerfect documents"
+HOMEPAGE="http://libwpd.sourceforge.net/"
+SRC_URI="mirror://sourceforge/libwpd/libwpd-${VERSION}.tar.xz"
+SRC_DIR="libwpd-${VERSION}"
+PATCH_URI="0.9.4-vpath.patch"
+
+PKG_NAMES="libwpd-tools ${NAME}_10 ${NAME}-devel ${NAME}-doc"
+libwpd_tools_CATEGORY="Text"
+libwpd_tools_OBSOLETES="libwpd-bin"
+libwpd_tools_SUMMARY=${SUMMARY/Library/Utilities}
+libwpd_tools_CONTENTS="usr/bin/*.exe"
+libwpd0_10_10_CONTENTS="--exclude=html usr/bin/*-0.10-10.dll usr/share/doc/"
+libwpd0_10_devel_CONTENTS="usr/include/ usr/lib/"
+libwpd0_10_doc_CONTENTS="usr/share/doc/${NAME}/html/"
+
+KEEP_LA_FILES="none"
