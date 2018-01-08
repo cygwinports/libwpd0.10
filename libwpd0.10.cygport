@@ -1,5 +1,5 @@
 NAME="libwpd0.10"
-VERSION=0.10.1
+VERSION=0.10.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Library for reading WordPerfect documents"
